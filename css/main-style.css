@@ -62,15 +62,17 @@ SECTION - INTRO
     display: block;
     color: white;
     text-align: center;
-//  padding: 14px 16px;
+ // padding: 14px 16px;
     text-decoration: none;
-	font-size: 20px; 
+	font-size: 26px; 
     vertical-align: middle;
-    padding-right: 60px;
+    padding-right: 30px;
  }
 
  li a:hover {
-  	color: red;
+  	color: orange;
+    text-decoration: underline;
+    font-weight: bold;
  }
 
 /* buttons ---------------------------------------------------- */
@@ -110,7 +112,7 @@ HEADLINE TITLE
     font-weight: 700;
     letter-spacing: 2px; }
   .header__menu {
-	width: 500px;
+	  width: 500px;
     margin-left: auto;
     margin-right: auto;
   }
