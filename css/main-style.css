@@ -149,6 +149,31 @@ HEADLINE TITLE
 	float: left;
 }
 
+
+/*
+***********
+FOOTER
+************
+*/
+
+.footer {
+  padding: 50px 20px;
+  font-size:24px;  
+  padding-top:120px;
+}
+
+.social {
+    float:right;
+    display: inline-block;
+    border: 2px solid white;
+    padding-top:4px;
+}
+
+.social a {
+  display:inline-block;
+  font-size: 20px;
+}
+
 /*
 ***********
 BUTTONS
