@@ -1,0 +1,21 @@
+@keyframes pulse {
+    from {
+        transform: scale(1);
+    }
+  
+    to {
+        transform: scale(1.03);
+    }
+  }
+  
+.pulse {
+    animation-name: pulse;
+
+    animation-duration: 1s; 
+    animation-timing-function: ease-out; 
+    animation-delay: 0;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+    animation-fill-mode: both;
+    animation-play-state: running;
+}
