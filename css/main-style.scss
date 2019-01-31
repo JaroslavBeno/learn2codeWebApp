@@ -2,6 +2,7 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,700|Open+Sans:400,700');
 @import "../node_modules/normalize.css/normalize.css";
 @import "_variables.scss";
+@import "_animation.scss";
 
 /*
 ***********
@@ -23,14 +24,6 @@ a:hover {
     text-decoration: none
 }
 
-.no-padding {
-    padding: 0;
-}
-
-.no-margin {
-    margin: 0;
-}
-
 body,
 html {
     margin: 0;
@@ -43,7 +36,13 @@ html {
 }
 
 .container {
+    display: flex;
+    flex-direction: column;
+    align-content: flex-end;
+    align-items: center;
     max-width: 1170px;
+    height: 100vh;
+    padding: 20px;
     margin: 0 auto;
 }
 
@@ -64,36 +63,79 @@ HEADLINE TITLE
 */
 
 .header {
-    padding: 50px 20px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @media screen and (min-width: 800px) {
+        flex-direction: row;
+        justify-content: space-between;
+    } 
     &__logo {
+        width: 160px;
         padding: 20px;
         border: 2px solid $color-3;
+        border-radius: 0 10px 0 10px;
         text-transform: uppercase;
         font-family: $headline;
         font-weight: 700;
         letter-spacing: 2px;
     }
+    &__menu {
+        padding: 0;
+        margin: 50px 0;
+        display: flex;
+        li {
+            list-style: none; 
+        }
+        a {
+            transition: 0.5s;
+            padding: 20px;
+            font-weight: 700;
+
+            &:hover {
+                color: $color-4;
+                background: $color-3;
+            }
+        }
+        .active {
+            color: $color-4;
+            background: $color-3;
+        }
+    }
 }
 
-.headline__wrapper {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-top: 100px;
-    .headline {
-        font-family: $headline;
-        font-size: 70px;
-        text-transform: uppercase;
-        margin-bottom: 0
-    }
+.headline {
+    font-family: $headline;
+    font-size: 60px;
+    text-transform: uppercase;
+    margin: 0;
+
+    @media screen and (min-width: 500px) {
+        font-size: 80px;
+    }   
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        @media screen and (min-width: 500px) {
+            margin-top: 60px;
+        } 
+        @media screen and (min-width: 800px) {
+            margin-top: 100px;
+        } 
+    
     .text {
         max-width: 800px;
         font-size: 20px;
-        margin-bottom: 50px;
+        line-height: 30px;
+        margin: 50px 0;
     }
 }
-
+}
 
 /*
 ***********
@@ -115,6 +157,26 @@ BUTTONS
         &:hover {
             background: $color-2;
             transition: background-color .5s;
+        }
+    }
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    padding: 20px 0
+}
+
+.social {
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+    li {
+        list-style: none;
+        &:not(:last-child) {
+            padding-right: 30px 
         }
     }
 }

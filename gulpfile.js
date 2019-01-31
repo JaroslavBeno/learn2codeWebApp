@@ -53,7 +53,7 @@ gulp.task('browser-sync', function() {
   });
 });
 
-gulp.task('watch', ['browser-sync', 'build'], () => {
+gulp.task('watch', ['build', 'browser-sync'], () => {
     gulp.watch('css/**/*.scss', ['styles']);
     gulp.watch('js/main.js', ['scripts']);
 });
